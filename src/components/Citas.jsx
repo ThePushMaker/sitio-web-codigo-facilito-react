@@ -3,16 +3,17 @@ import { useEffect, useState } from "react";
 const Citas = () => {
   const [quote, setQuote] = useState(null)
   useEffect(function getQuotes() {
-    fetch('https://theofficeapi.dev/api/episodes')
+    fetch(`https://theofficeapi.dev/api/episodes`)
       .then(response => response.json())
       // .then(data => console.log(data))
-      .then(data => setQuote(data.results[0]))
+      .then(data => setQuote(data.results[Math.floor(Math.random() * 10)+1]))
   }
   , [])
 
   return (
     <div>
-      {quote?.summary}
+      <br />
+      "{quote?.summary}"
     </div>
   );
 }

@@ -25,6 +25,7 @@ body, html, #root {
   min-height: 100vh;
 }
 .App {
+  text-align: center;
   height: 100%;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -32,6 +33,7 @@ body, html, #root {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
+  padding: 0 20rem 0 20rem;
 }
 main {
   flex: 1;
