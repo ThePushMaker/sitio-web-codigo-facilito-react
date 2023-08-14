@@ -1,0 +1,39 @@
+:root {
+  --menu-border-color: #4895EF;
+  --background-color: #ffffeb;
+  --text-color: black;
+  --active: #d62828;
+  --menu-text-color:#f72585;
+  --menu-text-hover-color:#4cc9f0;
+  --button-backgound-color: #ff80ba;
+  --button-background-color-hover: #8dafff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --menu-border-color: #ebb2ff;
+    --background-color: #051739;
+    --text-color: white;
+    --active: #f88f00;
+    --menu-text-color:#ff5cf3;
+    --menu-text-hover-color:#83d0ff;
+    --button-backgound-color: #427bfe;
+    --button-background-color-hover: #c865f9ff;
+  }
+}
+body, html, #root {
+  min-height: 100vh;
+}
+.App {
+  height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+main {
+  flex: 1;
+  padding: 14px;
+}

@@ -1,10 +1,11 @@
-import MenuItem from "./MenuItem"
+import MenuItem from "../MenuItem/MenuItem.jsx"
+import './Menu.css'
 
 function Menu(){
   return (
-    <header className="App-header">
+    <header className="menu-wrapper">
        <nav>
-        <ul>
+        <ul className="menu">
           <MenuItem 
             text='Home'
             link='/'
