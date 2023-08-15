@@ -4,25 +4,23 @@ import './Episodios.css'
 
 const Episodios = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [episode, setEpisode] = useState(null);
   const [shouldRefresh, setShouldRefresh] = useState(true);
+  const [episode, setEpisode] = useState(null);
 
   useEffect(function getEpisodes () {
     // si shouldEffect está en falso esta condición va a dar verdadero y ya no va a ejecutar lo demás del codigo, va a cortar la ejecución de la función
-    if (!shouldRefresh) {
-      return
-    }
+    if (!shouldRefresh) return;
 
     setIsLoading(true);
 
     fetch('https://theofficeapi.dev/api/episodes')
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       setShouldRefresh(false);
+      console.log(data)
       setEpisode(data.results[Math.floor(Math.random() * 9)+1]);
       setIsLoading(false);
-    }).catch(error => console.log("Error 400 - BAD REQUEST. Hubo un error al intentar recibir la información desde la api"))
+    }).catch(error => console.log('Error 400 - BAD REQUEST. Hubo un error al intentar recibir la información desde la api'))
   }, [shouldRefresh])
   
   function onRefresh() {  
