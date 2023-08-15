@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles  from './Personajes.module.css'
 
 const Personajes = () => {
   const [character, setCharacter] = useState(null)
@@ -15,16 +16,22 @@ const Personajes = () => {
     return null;
   }
   return (
-    <div>
-      Nombre: {character.name}
-      <br/>
-      Actor: {character.actor}
-      <br/>
-      Genero: {character.gender}
-      <br/>
-      Trabajo: {character.job[1]}
-      <br/>
-      Lugar de trabajo: {character.workplace[1]}
+    <div className={styles.infoContainer}>
+      <h1>
+        Nombre: {character.name}
+      </h1>
+      <p className={styles.info}>
+        Actor: {character.actor}
+      </p>
+      <p className={styles.info}>
+        Genero: {!character.gender?'Desconocido':character.gender}
+      </p>
+      <p className={styles.info}>
+        Trabajo: {character.job[0]}
+      </p>
+      <p className={styles.info}>
+        Lugar de trabajo: {character.workplace[0]}
+      </p>
     </div>
   );
 }

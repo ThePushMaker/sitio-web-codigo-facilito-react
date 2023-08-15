@@ -15,7 +15,10 @@ const Citas = () => {
   return (
     <div>
       <br />
-      "{quote?.summary}"
+      <h1>Cita: </h1>
+      <p>
+        "{quote?.summary}"
+      </p>
     </div>
   );
 }
