@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { ReactComponent as Loading } from '../../assets/loading.svg'
+import './Episodios.css'
 
 const Episodios = () => {
   const [episode, setEpisode] = useState(null);
   const [shouldRefresh, setShouldRefresh] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(function getEpisodes () {
     // si shouldEffect está en falso esta condición va a dar verdadero y ya no va a ejecutar lo demás del codigo, va a cortar la ejecución de la función
@@ -28,12 +30,15 @@ const Episodios = () => {
     setShouldRefresh(true);
   }
 
-  if(!episode){
-    return null;
+  if(isLoading){
+    return <div className='loading-wrapper'>
+      <Loading />
+      <span>Loading...</span>
+    </div>
   }
   return(
     <div>
-      <button onClick={(onRefresh)}>Refresh</button>
+      <button onClick={(onRefresh)} className='refresh-button'>Refresh</button>
       <h1>
         Titulo: {episode.title}
       </h1>

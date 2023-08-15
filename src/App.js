@@ -2,7 +2,7 @@ import './App.css';
 import Home from './components/Home/Home.jsx'
 import Menu from './components/Menu/Menu';
 import Personajes from './components/Personajes';
-import Episodios from './components/Episodios';
+import Episodios from './components/Episodios/Episodios';
 import Citas from './components/Citas';
 
 function App() {
