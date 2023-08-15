@@ -3,9 +3,9 @@ import { ReactComponent as Loading } from '../../assets/loading.svg'
 import './Episodios.css'
 
 const Episodios = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [episode, setEpisode] = useState(null);
   const [shouldRefresh, setShouldRefresh] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(function getEpisodes () {
     // si shouldEffect está en falso esta condición va a dar verdadero y ya no va a ejecutar lo demás del codigo, va a cortar la ejecución de la función

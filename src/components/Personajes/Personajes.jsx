@@ -1,19 +1,26 @@
 import { useEffect, useState } from "react";
 import styles  from './Personajes.module.css'
+import { ReactComponent as Loading } from '../../assets/loading.svg'
 
 const Personajes = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [character, setCharacter] = useState(null)
   useEffect(function getCharacter () {
+    setIsLoading(true);
     fetch(`https://theofficeapi.dev/api/character/${Math.floor(Math.random() * 9)+1}`)
     .then(response => response.json())
     .then(data => {
       console.log(data);
       setCharacter(data);
+      setIsLoading(false);
     }).catch(error => console.log("Error 400 - BAD REQUEST. Hubo un error al intentar recibir la información desde la api"))
   }, [])
 
-  if(!character){
-    return null;
+  if(isLoading){
+    return <div className='loading-wrapper'>
+      <Loading />
+      <span>Loading...</span>
+    </div>
   }
   return (
     <div className={styles.infoContainer}>
