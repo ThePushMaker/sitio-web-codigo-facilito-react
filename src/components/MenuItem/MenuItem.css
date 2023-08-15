@@ -7,6 +7,7 @@
   font-weight: 600;
   font-size: 18px;
   transition: all .ls ease-in;
+  text-decoration:none;
 }
 
 .menu-item a:hover {

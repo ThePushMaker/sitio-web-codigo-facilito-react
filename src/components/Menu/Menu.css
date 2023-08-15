@@ -1,5 +1,5 @@
 .menu-wrapper {
-  border-button: 1px solid var(--menu-border-color);
+  border-bottom: 1px solid var(--menu-border-color);
 }
 
 .menu {
