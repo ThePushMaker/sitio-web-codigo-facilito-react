@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home.jsx'
+import Menu from './components/Menu/Menu';
+import Personajes from './components/Personajes';
+import Episodios from './components/Episodios/Episodios';
+import Citas from './components/Citas';
 
 function App() {
+  const currentURL = window.location.pathname;
+  function renderContent () {
+    switch(currentURL) {
+      case "/":
+        return <Home />
+      case "/personajes":
+        return <Personajes/>
+      case "/citas":
+        return <Citas/>
+      case "/episodios":
+        return <Episodios/>
+      default:
+        return <Home/>
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <main>
+        {renderContent()}
+      </main>
+      <footer>
+        Hecho para el taller de código facilito
+      </footer>
     </div>
   );
 }
