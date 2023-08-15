@@ -39,3 +39,9 @@ main {
   flex: 1;
   padding: 14px;
 }
+
+footer {
+  border-top: 1px solid var(--menu-border-color);
+  padding: 10px;
+  text-align: center;
+}

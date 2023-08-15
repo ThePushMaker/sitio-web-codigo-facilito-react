@@ -25,9 +25,12 @@ function App() {
   return (
     <div className="App">
       <Menu />
-      {
-        renderContent()
-      }
+      <main>
+        {renderContent()}
+      </main>
+      <footer>
+        Hecho para el taller de código facilito
+      </footer>
     </div>
   );
 }

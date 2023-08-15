@@ -5,8 +5,10 @@ const Citas = () => {
   useEffect(function getQuotes() {
     fetch(`https://theofficeapi.dev/api/episodes`)
       .then(response => response.json())
-      // .then(data => console.log(data))
-      .then(data => setQuote(data.results[Math.floor(Math.random() * 10)+1]))
+      .then(data => {
+        console.log(data);
+        setQuote(data.results[Math.floor(Math.random() * 9)+1]);
+      }).catch(error => console.log("Error 400 - BAD REQUEST. Hubo un error al intentar recibir la información desde la api"))
   }
   , [])
 

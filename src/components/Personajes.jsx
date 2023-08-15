@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 const Personajes = () => {
   const [character, setCharacter] = useState(null)
   useEffect(function getCharacter () {
-    fetch(`https://theofficeapi.dev/api/character/${Math.floor(Math.random() * 10)+1}`)
+    fetch(`https://theofficeapi.dev/api/character/${Math.floor(Math.random() * 9)+1}`)
     .then(response => response.json())
-    .then(data => setCharacter(data))
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data);
+      setCharacter(data);
+    }).catch(error => console.log("Error 400 - BAD REQUEST. Hubo un error al intentar recibir la información desde la api"))
   }, [])
 
   if(!character){
