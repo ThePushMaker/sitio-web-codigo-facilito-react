@@ -1,11 +1,12 @@
 import './MenuItem.css';
+import { Link } from "react-router-dom";
 
 function MenuItem(props) {
   return(
     <li className='menu-item'>
-      <a href={props.link}>
+      <Link to={props.link}>
         {props.text}
-      </a>
+      </Link>
     </li>
   );
 }
