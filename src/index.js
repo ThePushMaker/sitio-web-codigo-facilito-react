@@ -9,21 +9,21 @@ import Home from './components/Home/Home.jsx'
 import Menu from './components/Menu/Menu';
 import Personajes from './components/Personajes/Personajes';
 import Episodios from './components/Episodios/Episodios';
-import Citas from '
+import Citas from './components/Citas'
 
 const router = createHashRouter([
   {
     path:'/',
     elements:<Home />
-  }
+  },
   {
     path:'/personajes',
     elements:<Personajes />
-  }
+  },
   {
     path:'/episodios',
     elements:<Episodios />
-  }
+  },
   {
     path:'/citas',
     elements:<Citas />

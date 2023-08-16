@@ -1,6 +1,6 @@
 import './App.css';
 // import Home from './components/Home/Home.jsx'
-// import Menu from './components/Menu/Menu';
+import Menu from './components/Menu/Menu';
 // import Personajes from './components/Personajes/Personajes';
 // import Episodios from './components/Episodios/Episodios';
 // import Citas from './components/Citas';
