@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/sitio-web-codigo-facilito-react/static/css/main.93bc9b7c.css",
-    "main.js": "/sitio-web-codigo-facilito-react/static/js/main.9e4737a8.js",
+    "main.js": "/sitio-web-codigo-facilito-react/static/js/main.b2963c27.js",
     "static/js/787.10f74f10.chunk.js": "/sitio-web-codigo-facilito-react/static/js/787.10f74f10.chunk.js",
     "static/media/the-office.jpg": "/sitio-web-codigo-facilito-react/static/media/the-office.c5ad8c1961d5ffbb78bc.jpg",
     "static/media/loading.svg": "/sitio-web-codigo-facilito-react/static/media/loading.7b9eac11b64262d6101d30db09a335d8.svg",
     "index.html": "/sitio-web-codigo-facilito-react/index.html",
     "main.93bc9b7c.css.map": "/sitio-web-codigo-facilito-react/static/css/main.93bc9b7c.css.map",
-    "main.9e4737a8.js.map": "/sitio-web-codigo-facilito-react/static/js/main.9e4737a8.js.map",
+    "main.b2963c27.js.map": "/sitio-web-codigo-facilito-react/static/js/main.b2963c27.js.map",
     "787.10f74f10.chunk.js.map": "/sitio-web-codigo-facilito-react/static/js/787.10f74f10.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93bc9b7c.css",
-    "static/js/main.9e4737a8.js"
+    "static/js/main.b2963c27.js"
   ]
 }
